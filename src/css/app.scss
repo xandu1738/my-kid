@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif, "Lucida Sans", "Lucida Sans Regular",
-    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 
 .app {
@@ -14,10 +14,8 @@
   align-items: start;
 }
 .main-page {
-  // margin-top: 35px;
   display: flex;
   flex-direction: column;
-  //   background-color: #8380a1;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -64,14 +62,77 @@
     display: flex;
     .middle,
     .right-side {
-      //   background-color: yellow;
-      width: 65%;
+      width: 70%;
       height: 100vh;
       padding: 20px;
       margin: 10px;
     }
     .right-side {
-      width: 35%;
+      width: 30%;
+      .item {
+        .head {
+          color: grey;
+        }
+        .body {
+          background-color: #fff;
+          padding: 8px;
+          border-radius: 8px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-right: 20px;
+          .leading {
+            display: flex;
+            justify-content: center;
+            .title {
+              margin-left: 10px;
+            }
+          }
+          .trailing {
+            border-left: 1px solid gray;
+          }
+        }
+      }
+      .student-support {
+        .title {
+          padding-top: 10px;
+          color: gray;
+        }
+        .body {
+          background-color: #ded;
+          .support-person {
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            .details {
+              margin-left: 15px;
+            }
+            .user-account {
+              display: flex;
+              align-items: center;
+              .details {
+                padding: 0;
+                padding-left: 10px;
+                .uname {
+                  font-size: 15px;
+                }
+                .position {
+                  font-size: 13px;
+                  color: grey;
+                }
+              }
+              .logout {
+                padding-left: 10px;
+              }
+            }
+            img {
+              height: 50px;
+              width: 50px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -112,19 +173,24 @@
 .items-list {
   font-size: 15px;
   list-style: none;
-  .parent-item {
-    background-color: rgba(0, 0, 0, 0.2);
+  .children {
     margin: 5px;
     border-radius: 5px;
     color: #fff;
     border: none;
     cursor: pointer;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.1);
+    }
     .icon {
       padding-right: 10px;
+    }.toggle-list-item{
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.1);
+      }
     }
   }
   .list-item {
-    background-color: rgba(0, 0, 0, 0.2);
     padding: 10px 150px 10px 20px;
     margin: 5px;
     border-radius: 5px;
@@ -133,22 +199,24 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
 }
 .icon {
   padding-right: 10px;
 }
 .toggle-list-item {
-  border: 1px solid rgba(248, 240, 240, 0.2);
-  padding: 8px 8px 8px 10px;
+  // border: 1px solid rgba(248, 240, 240, 0.2);
+  padding: 8px 8px 8px 20px;
 }
 .card {
-  //   width: 300px;
   background-color: #f4f4f4;
   border-radius: 10px;
-  //   padding: 20px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   .card-head {
     border-radius: 10px 10px 0px 0px;
     padding: 10px;
@@ -158,9 +226,48 @@
     .profile {
       display: flex;
       flex-direction: column;
-      padding-left: 10px;
+      // justify-content: space-between;
+      // align-items: center;
+      width: 100%;
+      // background-color: #ded;
+      .profile-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-top: 20px;
+        width: 100%;
+        // background-color: red;
+        .icons {
+          // background-color: #221d53;
+          margin-right: 20px;
+          justify-self: end;
+        }
+      }
+      .profile-bottom {
+        margin: 10px;
+        display: flex;
+        justify-self: end;
+      }
+    }
+  }
+  .card-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .attribute-value {
+      border: 1px solid #fff;
+      display: flex;
+      flex-direction: column;
       justify-content: start;
       align-items: start;
+      margin: 5px;
+      padding: 5px;
+      .attribute {
+        font-weight: bold;
+      }
+      .value {
+        color: gray;
+      }
     }
   }
   img {

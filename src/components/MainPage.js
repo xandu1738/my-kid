@@ -1,6 +1,8 @@
 import React from "react";
 import NavBar from "./NavBar";
 import StudentDetails from "./StudentDetails";
+import EnrollmentTile from "./EnrollmentTile";
+import StudentSupport from "./StudentSupport";
 
 const MainPage = ({ toggle }) => {
   return (
@@ -11,19 +13,8 @@ const MainPage = ({ toggle }) => {
           <StudentDetails />
         </div>
         <div className="right-side">
-          Deleniti laboriosam quisquam obcaecati modi et possimus id neque
-          magnam aut quibusdam facere exercitationem illo, voluptates cupiditate
-          cumque numquam magni sapiente voluptas commodi quae debitis natus
-          enim. Nobis repellendus soluta natus voluptate nulla ad amet
-          reiciendis. Aliquam, possimus repellendus dignissimos error
-          accusantium labore exercitationem voluptatem deleniti minus, iste
-          nihil facilis voluptatum quod mollitia magni provident ipsa nulla
-          excepturi esse. Debitis aperiam eligendi sed assumenda nihil velit!
-          Incidunt aperiam, quis consequuntur a officia delectus harum iusto
-          obcaecati libero dolores suscipit saepe voluptatibus ad sed aliquid
-          eos sequi blanditiis sit voluptates fugiat. Omnis accusantium aliquid,
-          quo quibusdam voluptas sunt error reprehenderit ullam deserunt? Hic
-          quaerat iure debitis corrupti ipsa!
+          <EnrollmentTile />
+          <StudentSupport />
         </div>
       </div>
     </div>

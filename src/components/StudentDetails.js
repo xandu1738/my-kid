@@ -1,9 +1,11 @@
 import React from "react";
+import { Edit } from "react-feather";
+import StudentAttribute from "./StudentAttribute";
 
 const StudentDetails = () => {
   return (
     <div>
-      <div class="card">
+      <div className="card">
         <div className="card-head">
           <div className="avatar">
             <img
@@ -12,18 +14,30 @@ const StudentDetails = () => {
             />
           </div>
           <div className="profile">
-            <div className="name">
-              <h2>Levi Ackerman</h2>
+            <div className="profile-top">
+              <div className="name">
+                <h2>Levi Ackerman</h2>
+              </div>
+              <div className="icons">
+                <Edit />
+              </div>
             </div>
-            <div className="programme">
-              <p>Computer Science Student</p>
+            <div className="profile-bottom">
+              Bach. Science in Biomedical Engineering
             </div>
           </div>
         </div>
         <div className="card-details">
-          <p>University of Example</p>
-          <p>Email: john.doe@example.com</p>
-          <p>Phone: +1 123-456-7890</p>
+          <StudentAttribute attribute="First Name" value="Levi" />
+          <StudentAttribute attribute="Last Name" value="Ackerman" />
+          <StudentAttribute attribute="Class" value="Six" />
+          <StudentAttribute attribute="Student ID" value="1800721101" />
+          <StudentAttribute attribute="Gender" value="Male" />
+          <StudentAttribute attribute="Date of birth" value="1999-03-25" />
+          <StudentAttribute attribute="Nationality" value="Eldian" />
+          <StudentAttribute attribute="District" value="Trost" />
+          <StudentAttribute attribute="Next of Kin" value="Mikasa Ackerman" />
+          <StudentAttribute attribute="House" value="Survey Cops" />
         </div>
       </div>
     </div>

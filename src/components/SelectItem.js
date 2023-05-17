@@ -15,7 +15,7 @@ const SelectItem = ({ icon }) => {
       </div>
       <div className="children">
         {showChildren && (
-          <div className="parent-item">
+          <div className="children">
             <div className="toggle-list-item">Invoices</div>
             <div className="toggle-list-item">Receipts</div>
             <div className="toggle-list-item">Details</div>

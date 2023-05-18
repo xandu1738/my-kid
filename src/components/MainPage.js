@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import StudentDetails from "./StudentDetails";
 import EnrollmentTile from "./EnrollmentTile";
 import StudentSupport from "./StudentSupport";
+import ResultsChart from "./charts/ResultsChart";
 
 const MainPage = ({ toggle }) => {
   return (
@@ -11,6 +12,7 @@ const MainPage = ({ toggle }) => {
       <div className="body-area">
         <div className="middle">
           <StudentDetails />
+          <ResultsChart />
         </div>
         <div className="right-side">
           <EnrollmentTile />

@@ -4,7 +4,7 @@ const UserAvatar = ({ name, position, action, imgLink }) => {
   return (
     <div className="user-account">
       <div className="img">
-        <img src={imgLink} alt="photo of user" />
+        <img src={imgLink} alt="user pic" />
       </div>
       <div className="details">
         <div className="uname">{name}</div>

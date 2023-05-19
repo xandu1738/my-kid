@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ChevronDown } from "react-feather";
 
 const SelectItem = ({ icon }) => {
   const [showChildren, setShowChildren] = useState(false);

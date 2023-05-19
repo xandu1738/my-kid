@@ -1,26 +1,42 @@
 import React from "react";
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+  Outlet,
+} from "react-router-dom";
 import NavBar from "./NavBar";
-import StudentDetails from "./StudentDetails";
-import EnrollmentTile from "./EnrollmentTile";
-import StudentSupport from "./StudentSupport";
-import ResultsChart from "./charts/ResultsChart";
+import Dashboard from "./pages/Dashboard";
+import Calendar from "./pages/Calendar";
+import Curriculum from "./pages/Curriculum";
+import MakePayment from "./pages/MakePayment";
 
 const MainPage = ({ toggle }) => {
   return (
     <div className="main-page">
       <NavBar toggle={toggle} />
-      <div className="body-area">
-        <div className="middle">
-          <StudentDetails />
-          <ResultsChart />
-        </div>
-        <div className="right-side">
-          <EnrollmentTile />
-          <StudentSupport />
-        </div>
-      </div>
+      <Outlet />
     </div>
   );
 };
 
-export default MainPage;
+const Display = ({ toggle }) => {
+  const router = createBrowserRouter(
+    createRoutesFromElements(
+      <Route path="/" element={<MainPage toggle={toggle} />}>
+        <Route index element={<Dashboard />} />
+        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/curriculum" element={<Curriculum />} />
+        <Route path="/make-payment" element={<MakePayment />} />
+      </Route>
+    )
+  );
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+};
+
+export default Display;

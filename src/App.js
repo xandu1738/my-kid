@@ -1,17 +1,18 @@
 import { useState } from "react";
-import MainPage from "./components/MainPage";
 import SideBar from "./components/SideBar";
 import "./css/app.css";
+import Display from "./components/MainPage";
 
 function App() {
   const [showSidebar, setShowSidebar] = useState(false);
   const clicked = () => {
     setShowSidebar(!showSidebar);
   };
+
   return (
     <div className="app">
       {showSidebar && <SideBar />}
-      <MainPage toggle={clicked} />
+      <Display toggle={clicked} />
     </div>
   );
 }

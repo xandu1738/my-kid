@@ -16,15 +16,22 @@ const ResultsChart = () => {
     datasets: [
       {
         label: "Beginning of Term",
-        data: [9, 8.4, 7.3, 9.4, 7.5, 8.6],
-        backgroundColor: "aqua",
+        data: [9, 8.4, 6.3, 9.4, 7.5, 8.6],
+        backgroundColor: "blue",
         borderColor: "black",
         borderWidth: "1px",
       },
       {
-        label: "Beginning of Time",
+        label: "Mid Term",
         data: [7, 6.4, 7.3, 4.4, 6.5, 6.6],
         backgroundColor: "red",
+        borderColor: "black",
+        borderWidth: "1px",
+      },
+      {
+        label: "End of Term",
+        data: [9, 8.4, 6.3, 7.4, 8.5, 9.6],
+        backgroundColor: "yellow",
         borderColor: "black",
         borderWidth: "1px",
       },
@@ -36,7 +43,7 @@ const ResultsChart = () => {
       <div className="header">Results Chart</div>
       <div className="chart">
         <Bar
-          style={{ padding: "20px", width: "60%" }}
+          style={{ padding: "10px", width: "40%" }}
           data={data}
           options={options}
         ></Bar>

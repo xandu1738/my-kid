@@ -285,43 +285,95 @@
     margin-bottom: 10px;
   }
 }
-.generate-prn {
+.package {
   display: flex;
-  justify-content: center;
+  align-items: flex-start;
   margin: auto;
-  align-items: center;
-  .container {
+  .payments {
+    padding: 10px;
+    background-color: #383096;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background-color: #c9f3c4;
-    padding: 20px;
-    border-radius: 8px;
-    width: 400px;
-    label{
-      color: gray;
-      padding-bottom: 10px;
-      font-size: 25px;
-      font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #dede;
+    border-radius: 8px 0px 0px 8px;
+    .history {
+      .card {
+        margin: 5px;
+        background-color: rgba(255, 235, 215, 0.133);
+        padding: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        .title {
+          font-size: 15px;
+        }
+        .subtitle {
+          font-size: 13px;
+        }
+        .details {
+          align-self: flex-end;
+          font-size: 10px;
+        }
+      }
     }
-    .prn-form {
-      background-color: rgb(202, 196, 196);
-      border-radius: 4px;
-      border: none;
-      height: 40px;
-      margin-right: 5px;
-      width: 100%;
-      color: white;
-    }
-    .submit-prn {
-      padding: 10px 8px 10px 8px;
-      color: #dede;
-      border: none;
-      border-radius: 8px;
-      width: 100%;
-      margin-top: 20px;
-      background-color: rgb(47, 44, 226);
+  }
+  .generate-prn {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+      height: 100%;
+      border: 1px solid white;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      background-color: #c9f3c4;
+      padding: 20px;
+      border-radius: 0px 8px 8px 0px;
+      width: 400px;
+      .payment-tracker {
+        padding: 10px;
+        .paid,
+        .due {
+          font-size: 20px;
+          color: #000;
+          // background-color: #dede;
+        }
+      }
+      label {
+        color: gray;
+        padding-bottom: 10px;
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .prn-form {
+        background-color: rgb(202, 196, 196);
+        border-radius: 4px;
+        border: none;
+        height: 40px;
+        margin-right: 5px;
+        width: 100%;
+        color: black;
+        padding: 5px;
+      }
+      .submit-prn {
+        padding: 10px 8px 10px 8px;
+        color: #dede;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        margin-top: 20px;
+        background-color: rgb(47, 44, 226);
+      }
     }
   }
 }

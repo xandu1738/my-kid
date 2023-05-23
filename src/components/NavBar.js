@@ -1,12 +1,25 @@
 import React from "react";
-import { LogOut } from "react-feather";
 import DrawerToggle from "./DrawerToggle";
-import UserAvatar from "./UserAvatar";
 
 const NavBar = ({ toggle }) => {
   return (
     <div>
-      <nav>
+      <div className="toggle">
+        <DrawerToggle onclick={toggle} />
+      </div>
+      <nav className="nav">
+        <a href="#" className="logo">
+          E R O S <span>suite</span>
+        </a>
+        <ul>
+          <li className="active">Dashboard</li>
+          <li>Calendar</li>
+          <li>Payments</li>
+          <li>Curriculum</li>
+          <li>Reports</li>
+        </ul>
+      </nav>
+      {/* <nav>
         <div className="icon">
           <DrawerToggle handleClick={toggle} />
         </div>
@@ -18,7 +31,7 @@ const NavBar = ({ toggle }) => {
             action=<LogOut />
           />
         </div>
-      </nav>
+      </nav> */}
     </div>
   );
 };

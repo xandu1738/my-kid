@@ -39,14 +39,14 @@ const ResultsChart = () => {
   };
   const options = {};
   return (
-    <div>
+    <div className="chart-1">
       <div className="header">Results Chart</div>
       <div className="chart">
         <Bar
-          style={{ padding: "10px", width: "40%" }}
+          style={{ padding: "10px", width: "60%", height: "500px" }}
           data={data}
           options={options}
-        ></Bar>
+        />
       </div>
     </div>
   );
